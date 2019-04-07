@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Calculator</title>
+    <link type="text/css" rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Javascript Calculator</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="4"><input type="text" value="0" disabled><spam id="message"></spam></td>
+                    
+                </tr>
+                <tr>
+                    <td onclick="deleteAll()">C</td>
+                    <td onclick="deletePrevious()">CE</td>
+                    <td onclick="addPercent()">%</td>
+                    <td onclick="addDivision()">/</td>
+                </tr>
+                <tr>
+                    <td onclick="addNumber(7)">7</td>
+                    <td onclick="addNumber(8)">8</td>
+                    <td onclick="addNumber(9)">9</td>
+                    <td onclick="addMultiplication()">x</td>
+                </tr>
+                <tr>
+                    <td onclick="addNumber(4)">4</td>
+                    <td onclick="addNumber(5)">5</td>
+                    <td onclick="addNumber(6)">6</td>
+                    <td onclick="addSubtraction()">-</td>
+                </tr>
+                <tr>
+                    <td onclick="addNumber(1)">1</td>
+                    <td onclick="addNumber(2)">2</td>
+                    <td onclick="addNumber(3)">3</td> 
+                    <td onclick="addSum()">+</td>
+                </tr>
+                <tr>
+                    <td onclick="addNumber(0)">0</td>
+                    <td onclick="addDot()">.</td>
+                    <td onclick="result()" colspan="2">=</td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+<script type="text/javascript" src="calculator.js"></script>
+</body>
+</html>

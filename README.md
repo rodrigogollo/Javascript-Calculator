@@ -1,6 +1,6 @@
 # Javascript-Calculator
 
-A Standard Calculator built in Javascript
+A Standard Calculator built in Javascript.
 
 #### CONTACT ME AT
 
