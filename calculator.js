@@ -3,7 +3,7 @@ var currValue = document.querySelector("input");
 var ans = false;
 var msg = document.querySelector("#message");
 //Add any number to the input
-function addNumber(num){
+const addNumber = (num) => {
     if(currValue.value.length < 20){
         if(currValue.value == "0" || ans){
             currValue.value = num;
@@ -20,13 +20,13 @@ function addNumber(num){
 }
 
 //Function that turn the input value to zero
-function deleteAll(){
+const deleteAll = () => {
     currValue.value = "0";
     msg.textContent = "";
 }
 
 //Delete the last number added to the input value
-function deletePrevious(){
+const deletePrevious = () => {
     if(currValue.value.length == 1){
         currValue.value = "0";
     } else{
@@ -38,37 +38,37 @@ function deletePrevious(){
 //first do the calculation provided then with the result add the next symbol to the input
 
 //add percent to input
-function addPercent(){
+const addPercent = () => {
     result();
     ans = false;
     currValue.value += "%";
 }
 //add division to input
-function addDivision(){
+const addDivision = () =>{
     result();
     ans = false;
     currValue.value += "/"
 }
 //add multiplication to input
-function addMultiplication(){
+const addMultiplication = () => {
     result();
     ans = false;
     currValue.value += "*"
 }
 //add subtraction to input
-function addSubtraction(){
+const addSubtraction = () => {
     result();
     ans = false;
     currValue.value += "-"
 }
 //add sum to input
-function addSum(){
+const addSum = () => {
     result();
     ans = false;
     currValue.value += "+"
 }
 //add dot to input
-function addDot(){
+const addDot = () => {
     if(!currValue.value.includes("."))
         currValue.value += "."
 }
@@ -101,7 +101,7 @@ function result(){
     ans = true;
 }
 //function that receives the calculation symbol, do the calculation and returns the result
-function includeSymbol(sym){
+const includeSymbol = (sym) => {
     if(currValue.value.includes(sym)){
         var a =  currValue.value.substring(0, currValue.value.indexOf(sym));
         var b = currValue.value.substring(currValue.value.indexOf(sym)+1, currValue.value.length);
