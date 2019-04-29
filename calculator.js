@@ -3,7 +3,7 @@ const currValue = document.querySelector("input");
 let ans = false;
 const msg = document.querySelector("#message");
 //Add any number to the input
-const addNumber = (num) => {
+const addNumber = num => {
     if(currValue.value.length < 20){
         if(currValue.value == "0" || ans){
             currValue.value = num;
@@ -101,7 +101,7 @@ function result(){
     ans = true;
 }
 //function that receives the calculation symbol, do the calculation and returns the result
-const includeSymbol = (sym) => {
+const includeSymbol = sym => {
     if(currValue.value.includes(sym)){
         let a =  currValue.value.substring(0, currValue.value.indexOf(sym));
         let b = currValue.value.substring(currValue.value.indexOf(sym)+1, currValue.value.length);
