@@ -1,7 +1,7 @@
 //Get the input value
-var currValue = document.querySelector("input");
-var ans = false;
-var msg = document.querySelector("#message");
+const currValue = document.querySelector("input");
+let ans = false;
+const msg = document.querySelector("#message");
 //Add any number to the input
 const addNumber = (num) => {
     if(currValue.value.length < 20){
@@ -76,8 +76,8 @@ const addDot = () => {
 function result(){
     //check if theres already any calculation  symbol in the end of the input
     //if there's replace for the symbol that has called the function
-    var conditions = ["+","-","/","*","%"];
-    var verification = conditions.some(el => currValue.value[currValue.value.length-1].includes(el));
+    let conditions = ["+","-","/","*","%"];
+    let verification = conditions.some(el => currValue.value[currValue.value.length-1].includes(el));
     if(verification){
         deletePrevious();
     } else{
@@ -103,8 +103,8 @@ function result(){
 //function that receives the calculation symbol, do the calculation and returns the result
 const includeSymbol = (sym) => {
     if(currValue.value.includes(sym)){
-        var a =  currValue.value.substring(0, currValue.value.indexOf(sym));
-        var b = currValue.value.substring(currValue.value.indexOf(sym)+1, currValue.value.length);
+        let a =  currValue.value.substring(0, currValue.value.indexOf(sym));
+        let b = currValue.value.substring(currValue.value.indexOf(sym)+1, currValue.value.length);
         a = parseFloat(a);
         b = parseFloat(b);
         switch (sym){
